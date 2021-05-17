@@ -200,7 +200,7 @@ export default function BalancesList() {
               <>({numberFormat.format(totalUsdValue.toFixed(2))})</>
             )}
           </Typography>
-          <SwapButton />
+          {localStorage.getItem('unreleased') && <SwapButton />}
           {selectedAccount &&
             selectedAccount.name !== 'Main account' &&
             selectedAccount.name !== 'Hardware wallet' && (
